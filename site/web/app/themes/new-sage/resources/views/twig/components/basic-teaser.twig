@@ -1,0 +1,45 @@
+{% set icon = 'svg/ui/arrow.twig' %}
+{% set moretext = 'weiterlesen' %}
+
+<article class="basic-teaser {% if not post.get_thumbnail %}basic-teaser--no-image{% endif %}">
+    {% if post.get_thumbnail %}
+        <div class="basic-teaser__media">
+            <a href="{{post.link}}">
+                <img src="{{post.thumbnail.src}}" />
+            </a>
+        </div>
+    {% else %}
+    <div class="basic-teaser__media">
+        <a href="{{post.link}}">
+            <div class="basic-teaser__image"></div>
+            <div class="basic-teaser__overlay">
+                <span>{{post.post_type}}</span>
+            </div>
+        </a>
+    </div>
+    {% endif %}
+
+    <div class="basic-teaser__content">
+
+        <header class="basic-teaser__header">
+            {% if post.superheadline %}
+                <p class="basic-teaser__superheadline">{{ post.superheadline}}</p>
+            {% endif %}
+
+            <h3 class="basic-teaser__title"><a href="{{post.link}}">{{post.title}}</a></h3>
+        </header>
+
+        {% if post.preview %}
+            <div class="basic-teaser__main">
+                {{post.preview.read_more('')}}
+            </div>
+        {% endif %}
+
+        <div class="basic-teaser__footer">
+            <a class="basic-teaser__link" href="{{post.link}}">
+                <span class="icon">{% include icon %}</span>
+                <span class="text">{{ moretext }}</span>
+            </a>
+        </div>
+    </div>
+</article>

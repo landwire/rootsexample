@@ -1,0 +1,20 @@
+@mixin hide-text($indent: 100%) {
+  overflow: hidden;
+  text-indent: $indent;
+  white-space: nowrap;
+}
+
+@mixin link($color: inherit, $text-decoration: underline, $color-over: inherit, $text-decoration-over: underline) {
+  color: $color;
+  text-decoration: $text-decoration;
+
+  &:visited {
+    $color: $color;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-over;
+    text-decoration: $text-decoration-over;
+  }
+}

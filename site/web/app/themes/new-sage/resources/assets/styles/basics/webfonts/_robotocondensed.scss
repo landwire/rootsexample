@@ -1,0 +1,48 @@
+//*****************************************
+// Webfonts: Roboto Condensed
+//*****************************************
+
+// Regular
+@font-face {
+  font-family: $font-roboto-condensed;
+  font-style: $font-style--base;
+  font-variant: normal;
+  font-weight: $font-weight--base;
+  src:
+    local('Robotocondensed'),
+    local('Roboto Condensed'),
+    local('Roboto-Condensed'),
+    local('RobotoCondensed'),
+    local('robotocondensed'),
+    url('#{$path-fonts}Roboto_Condensed/RobotoCondensed-Regular-webfont.woff') format('woff');
+}
+
+// Light
+@font-face {
+  font-family: $font-roboto-condensed;
+  font-style: $font-style--base;
+  font-variant: normal;
+  font-weight: $font-weight--light;
+  src:
+    local('Robotocondensedlight'),
+    local('Roboto Condensed Light'),
+    local('Roboto-Condensed-Light'),
+    local('RobotoCondensedLight'),
+    local('robotocondensed'),
+    url('#{$path-fonts}Roboto_Condensed/RobotoCondensed-Light-webfont.woff') format('woff');
+}
+
+// Bold
+@font-face {
+  font-family: $font-roboto-condensed;
+  font-style: $font-style--base;
+  font-variant: normal;
+  font-weight: $font-weight--bold;
+  src:
+    local('Robotocondensedbold'),
+    local('Roboto Condensed Bold'),
+    local('Roboto-Condensed-Bold'),
+    local('RobotoCondensedBold'),
+    local('robotocondensedbold'),
+    url('#{$path-fonts}Roboto_Condensed/RobotoCondensed-Bold-webfont.woff') format('woff');
+}

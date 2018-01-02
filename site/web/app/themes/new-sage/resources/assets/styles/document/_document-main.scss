@@ -1,0 +1,17 @@
+//*****************************************
+// Document: Document main
+//*****************************************
+
+.document-main {
+  &.user-login {
+    margin: 4rem 0;
+
+    @include mq(desktop) {
+      margin: 6rem 0;
+    }
+
+    @include mq(desktop) {
+      margin: 9rem 0;
+    }
+  }
+}

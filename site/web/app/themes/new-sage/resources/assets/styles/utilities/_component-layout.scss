@@ -1,0 +1,22 @@
+@mixin c-container {
+  clear: both;
+  margin: 0;
+}
+
+@mixin c-column($min-height: 1px, $indent: 0) {
+  @include clearfix;
+
+  min-height: $min-height;
+  padding-bottom: $indent;
+  padding-left: $indent;
+  padding-right: $indent;
+  position: relative;
+
+  @include mq(tablet) {
+    float: left;
+  }
+
+  @include mq(desktop) {
+    padding-bottom: 0;
+  }
+}

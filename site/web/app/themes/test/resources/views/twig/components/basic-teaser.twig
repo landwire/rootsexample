@@ -1,0 +1,37 @@
+<article class="basic-teaser {{ variant }}">
+    {% if post.get_thumbnail %}
+        <div class="basic-teaser__media">
+            <a href="{{post.link}}">
+                <img src="{{post.thumbnail.src}}" />
+            </a>
+        </div>
+    {% else %}
+    <div class="basic-teaser__media">
+        <a href="{{post.link}}">
+            <div class="basic-teaser__image"></div>
+            <div class="basic-teaser__overlay">
+                <span>{{post.post_type}}</span>
+            </div>
+        </a>
+    </div>
+    {% endif %}
+
+    <div class="basic-teaser__content">
+
+        <header class="basic-teaser__header">
+            <h3 class="basic-teaser__title"><a href="{{post.link}}">{{post.title}}</a></h3>
+        </header>
+
+        {% if post.preview %}
+            <div class="basic-teaser__main">
+                {{post.preview}}
+            </div>
+        {% endif %}
+
+        <div class="basic-teaser__footer">
+            <a class="basic-teaser__link" href="{{post.link}}">
+                <span>{{ moretext }}</span>
+            </a>
+        </div>
+    </div>
+</article>

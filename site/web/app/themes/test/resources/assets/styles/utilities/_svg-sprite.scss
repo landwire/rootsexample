@@ -1,0 +1,72 @@
+//*****************************************
+// SVG Icons
+//*****************************************
+
+$svg-sprite-path: '../img/svg-sprite-9ee8806a.svg';
+$svg-sprite-width: 65.1px;
+$svg-sprite-height: 1404px;
+
+// name:
+// 1 => positionX
+// 2 => positionY
+// 3 => width
+// 4 => height
+
+$svg-sprite-map: (
+  decoration-dossier: (x: 0, y: 0, xy: 0 0, width: 23, height: 25),
+  decoration-dossier--big: (x: 0, y: -25, xy: 0 -25px, width: 55, height: 60),
+  social-media-facebook--outline: (x: 0, y: -85, xy: 0 -85px, width: 17, height: 32),
+  social-media-facebook--small-outline: (x: 0, y: -117, xy: 0 -117px, width: 11, height: 18),
+  social-media-facebook--small-outline--petrol: (x: 0, y: -135, xy: 0 -135px, width: 11, height: 18),
+  social-media-flickr--outline: (x: 0, y: -153, xy: 0 -153px, width: 29, height: 14),
+  social-media-flickr--small-outline: (x: 0, y: -167, xy: 0 -167px, width: 23, height: 12),
+  social-media-googleplus--outline: (x: 0, y: -179, xy: 0 -179px, width: 34, height: 22),
+  social-media-googleplus--small-outline: (x: 0, y: -201, xy: 0 -201px, width: 18, height: 17),
+  social-media-googleplus--small-outline--petrol: (x: 0, y: -218, xy: 0 -218px, width: 18, height: 17),
+  social-media-instagram--outline: (x: 0, y: -235, xy: 0 -235px, width: 31, height: 31),
+  social-media-instagram--small-outline: (x: 0, y: -266, xy: 0 -266px, width: 18, height: 18),
+  social-media-linkedin--outline: (x: 0, y: -284, xy: 0 -284px, width: 29, height: 29),
+  social-media-linkedin--small-outline: (x: 0, y: -313, xy: 0 -313px, width: 18, height: 18),
+  social-media-linkedin--small-outline--petrol: (x: 0, y: -331, xy: 0 -331px, width: 18, height: 18),
+  social-media-mail--outline: (x: 0, y: -349, xy: 0 -349px, width: 29, height: 19),
+  social-media-mail--small-outline: (x: 0, y: -368, xy: 0 -368px, width: 18, height: 15),
+  social-media-mail--small-outline--petrol: (x: 0, y: -383, xy: 0 -383px, width: 18, height: 15),
+  social-media-researchgate--small-outline--petrol: (x: 0, y: -398, xy: 0 -398px, width: 18, height: 18),
+  social-media-rss--outline: (x: 0, y: -416, xy: 0 -416px, width: 27, height: 27),
+  social-media-rss--small-outline: (x: 0, y: -443, xy: 0 -443px, width: 20, height: 20),
+  social-media-skype--small-outline: (x: 0, y: -463, xy: 0 -463px, width: 18, height: 18),
+  social-media-skype--small-outline--petrol: (x: 0, y: -481, xy: 0 -481px, width: 18, height: 18),
+  social-media-twitter--outline: (x: 0, y: -499, xy: 0 -499px, width: 28, height: 24),
+  social-media-twitter--small-outline: (x: 0, y: -523, xy: 0 -523px, width: 18, height: 15),
+  social-media-twitter--small-outline--petrol: (x: 0, y: -538, xy: 0 -538px, width: 18, height: 15),
+  social-media-whatsapp--outline: (x: 0, y: -553, xy: 0 -553px, width: 30, height: 30),
+  social-media-whatsapp--small-outline: (x: 0, y: -583, xy: 0 -583px, width: 18, height: 18),
+  social-media-xing--outline: (x: 0, y: -601, xy: 0 -601px, width: 25, height: 29),
+  social-media-xing--small-outline: (x: 0, y: -630, xy: 0 -630px, width: 16, height: 18),
+  social-media-xing--small-outline--petrol: (x: 0, y: -648, xy: 0 -648px, width: 16, height: 18),
+  social-media-youtube--outline: (x: 0, y: -666, xy: 0 -666px, width: 34, height: 25),
+  social-media-youtube--small-outline: (x: 0, y: -691, xy: 0 -691px, width: 18, height: 14),
+  social-media-youtube--small-outline--petrol: (x: 0, y: -705, xy: 0 -705px, width: 18, height: 14),
+  ui-accordion-close: (x: 0, y: -719, xy: 0 -719px, width: 19, height: 19),
+  ui-accordion-expand: (x: 0, y: -738, xy: 0 -738px, width: 16, height: 9),
+  ui-chevron-down--blue: (x: 0, y: -747, xy: 0 -747px, width: 16, height: 9),
+  ui-chevron-left--blue: (x: 0, y: -756, xy: 0 -756px, width: 8, height: 15),
+  ui-close: (x: 0, y: -771, xy: 0 -771px, width: 19, height: 19),
+  ui-download: (x: 0, y: -790, xy: 0 -790px, width: 23, height: 18),
+  ui-dropdown-chevron: (x: 0, y: -808, xy: 0 -808px, width: 10, height: 17),
+  ui-event: (x: 0, y: -825, xy: 0 -825px, width: 65.1, height: 65.1),
+  ui-link-arrow--blue: (x: 0, y: -891, xy: 0 -891px, width: 46, height: 46),
+  ui-link-arrow--white: (x: 0, y: -937, xy: 0 -937px, width: 46, height: 46),
+  ui-magnifier: (x: 0, y: -983, xy: 0 -983px, width: 20, height: 20),
+  ui-map: (x: 0, y: -1003, xy: 0 -1003px, width: 20, height: 27),
+  ui-map--big: (x: 0, y: -1030, xy: 0 -1030px, width: 37, height: 52),
+  ui-playbutton: (x: 0, y: -1082, xy: 0 -1082px, width: 61, height: 61),
+  ui-printer: (x: 0, y: -1143, xy: 0 -1143px, width: 26, height: 23),
+  ui-search: (x: 0, y: -1166, xy: 0 -1166px, width: 27, height: 27),
+  ui-slider-arrow-blue--left: (x: 0, y: -1193, xy: 0 -1193px, width: 39, height: 39),
+  ui-slider-arrow-blue--right: (x: 0, y: -1232, xy: 0 -1232px, width: 39, height: 39),
+  ui-slider-left: (x: 0, y: -1271, xy: 0 -1271px, width: 39, height: 39),
+  ui-slider-right: (x: 0, y: -1310, xy: 0 -1310px, width: 39, height: 39),
+  ui-to-top: (x: 0, y: -1349, xy: 0 -1349px, width: 37, height: 37),
+  ui-topic-close: (x: 0, y: -1386, xy: 0 -1386px, width: 19, height: 18)
+);

@@ -1,0 +1,13 @@
+<!-- extract:Teaser List category:Teaser System wrap:<div class="l-container"><div class="l-column l-column--large">:</div></div> -->
+<div class="teaser-list {% if size %}teaser-list--{{ size }}{% endif %}">
+    {% for item in items %}
+        <div class="teaser-list__item">
+            {% include 'components/basic-teaser.twig' with
+                {
+                    post: item
+                }
+            %}
+        </div>
+    {% endfor %}
+</div>
+<!-- endextract -->

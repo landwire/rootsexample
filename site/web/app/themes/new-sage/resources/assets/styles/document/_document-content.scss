@@ -1,0 +1,60 @@
+//*****************************************
+// Document: Document content section
+//*****************************************
+
+.document-content {
+
+}
+
+.document-content__stage {
+  margin-bottom: 4rem;
+}
+
+.document-content__header {
+}
+
+.document-content__footer {
+  margin-top: 4rem;
+}
+
+
+.document-content__main {
+  overflow-x: hidden;
+}
+
+.document-content__content {
+}
+
+.document-content__navigation {
+  //margin-bottom: 4rem;
+}
+
+.document-content__author {
+  padding-bottom: 6rem;
+
+  &::before {
+    background: $color-grey--dark;
+    content: " ";
+    display: block;
+    height: 1px;
+    margin-bottom: 4rem;
+    width: 6rem;
+  }
+
+  h2 {
+    font-family: $font-stack--headline;
+    font-size: $font-size--extralarge;
+    font-weight: $font-weight--base;
+    text-transform: uppercase;
+  }
+}
+
+.document-content__sharing {
+  .l-column {
+    > div {
+      border-top: solid 1px $color-border--base;
+      padding: 2rem 0 4rem;
+      margin-top: 4rem;
+    }
+  }
+}

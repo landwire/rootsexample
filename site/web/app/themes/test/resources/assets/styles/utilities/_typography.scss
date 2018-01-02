@@ -1,0 +1,73 @@
+//*****************************************
+// Utilities: Webfonts
+//*****************************************
+
+
+//
+// Use defined typography groups
+// @see _variables.scss
+//
+
+@function get-typo-property($key) {
+  $typo-properties: (
+    ff: font-family,
+    ffs: font-feature-settings,
+    fs: font-size,
+    fsa: font-size-adjust,
+    fst: font-style,
+    fv: font-variant,
+    fw: font-weight,
+    lh: line-height,
+    ls: letter-spacing,
+    ta: text-align,
+    td: text-decoration,
+    tsa: text-size-adjust,
+    tt: text-transform
+  );
+
+  @if map-has_key($typo-properties, $key) {
+    @return map-get($typo-properties, $key);
+  } @else {
+    @warn "@mixin typo: group `#{$key}` does not exist.";
+  }
+}
+
+@function get-typomap-section($key, $map: $typography-map) {
+  @return map-get($map, $key);
+}
+
+@function get-typomap-block($key, $breakpoint, $map: $typography-map) {
+  @return map-get(get-typomap-section($key, $map), $breakpoint);
+}
+
+@function merge-typomap-block($key, $breakpoint, $extends) {
+  @return map-merge(get-typomap-block($key, $breakpoint), $extends);
+}
+
+@mixin typo($name: default, $map: $typography-map) {
+  @each $breakpoint, $settings in map-get($map, $name) {
+    // Defaults
+    @if $breakpoint == base OR $breakpoint == default {
+      @each $property-key, $property-value in $settings {
+        #{get-typo-property($property-key)}: #{$property-value};
+      }
+    } @else {
+      // Consider breakpoint
+      @include mq($breakpoint) {
+        @each $property-key, $property-value in $settings {
+          #{get-typo-property($property-key)}: #{$property-value};
+        }
+      }
+    }
+  }
+}
+
+//
+// Superheadline
+//
+
+@mixin superheadline() {
+  @include typo(superheadline);
+
+  margin-bottom: $spacing--tiny;
+}

@@ -1,0 +1,17 @@
+//*****************************************
+// Utilities: Alignment
+//*****************************************
+
+@mixin orientation-center($display: block, $margin: auto) {
+  bottom: 0;
+  display: #{$display};
+  left: 0;
+  margin: #{$margin};
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+@mixin vertical-align-image($offset: 0.2em) {
+  margin-top: $offset;
+}

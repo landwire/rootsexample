@@ -1,0 +1,54 @@
+$typo-map-button: (
+  button-text: (
+    base: (
+      ff: $font-stack--headline,
+      fs: $font-size--small,
+      fw: $font-weight--bold,
+      lh: $line-height--small,
+      ta: center,
+    ),
+    tablet: (
+      fs: $font-size--base,
+    ),
+  ),
+);
+
+
+@mixin reset-button($display: inline-block, $background: transparent, $font-size: 1em) {
+  background: $background;
+  border: 0;
+  display: $display;
+  font-size: $font-size;
+}
+
+@mixin button-as-link($color: $color-link--base, $font-size: 1em, $display: inline) {
+  @include link($color);
+  @include reset-button($display: $display, $background: transparent, $font-size: $font-size);
+
+  @if $display != inline {
+    padding: 0;
+  }
+}
+
+@mixin link-as-button($color: $color-white, $color-over: $color-dark, $display: inline-block, $background: $color-dark, $background-over: $color-white, $font-size: $font-size--small, $border: 0, $border-over: 0, $padding: 1rem 2rem, $radius: 4px) {
+  background: $background;
+  border: $border;
+  border-radius: $radius;
+  color: $color;
+  display: $display;
+  font-size: $font-size;
+  padding: $padding;
+  text-decoration: none;
+
+  &:visited {
+    color: $color;
+  }
+
+  &:focus,
+  &:hover {
+    background: $background-over;
+    border: $border-over;
+    color: $color-over;
+    text-decoration: none;
+  }
+}

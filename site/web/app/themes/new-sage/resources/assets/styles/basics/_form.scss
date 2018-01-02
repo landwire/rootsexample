@@ -1,0 +1,327 @@
+$typo-map-form: (
+  default: (
+    base: ()
+  ),
+  button: (
+    base: ()
+  ),
+  input: (
+    base: ()
+  ),
+  label: (
+    base: ()
+  ),
+  placeholder: (
+    base: ()
+  ),
+  select: (
+    base: (fs: $font-size--base)
+  ),
+  textarea: (
+    base: ()
+  )
+);
+
+//
+// Placeholder
+//
+
+$placeholder-selectors: '::-webkit-input-placeholder', '::-moz-placeholder', ':-ms-input-placeholder';
+
+@each $selector in $placeholder-selectors {
+  #{unquote($selector)} {
+    @include typo(placeholder, $typo-map-form);
+
+    color: $color-text--medium;
+  }
+}
+
+//
+// Container
+//
+
+form {
+
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+}
+
+//
+// Label
+//
+
+legend {
+  display: block;
+  font-size: $font-size--base;
+  padding: 0;
+}
+
+label {
+  @include typo(label, $typo-map-form);
+
+  cursor: pointer;
+  display: block;
+}
+
+//
+// Basics and resets
+//
+button,
+input,
+select,
+textarea {
+  vertical-align: middle;
+}
+
+//
+// Input
+//
+
+input,
+select,
+textarea {
+
+}
+
+input {
+
+}
+
+// Text like inputs
+[type="color"],
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="file"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="phone"],
+[type="range"],
+[type="search"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"] {
+  @include typo(input, $typo-map-form);
+
+  background-color: $color-light;
+  border: 2px solid $color-border--form;
+  height: 4rem;
+  outline: 2px solid transparent;
+  padding: 0 $spacing--tiny;
+  transition: outline $transition--base ease-in-out;
+  width: 100%;
+
+  &:focus {
+    outline: 2px solid $color-medium;
+  }
+
+  &:disabled {
+    background: transparentize($color-border--form, 0.5);
+  }
+}
+
+[type="color"] {
+
+}
+
+[type="date"] {
+
+}
+
+[type="datetime"] {
+
+}
+
+[type="datetime-local"] {
+
+}
+
+[type="email"] {
+
+}
+
+[type="file"] {
+
+}
+
+[type="month"] {
+
+}
+
+[type="number"] {
+  // Remove spinner by default, show in focus/hover
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+
+  &:focus,
+  &:hover {
+    -moz-appearance: number-input;
+    -webkit-appearance: number-input;
+  }
+
+  //&::-webkit-inner-spin-button,
+  //&::-webkit-outer-spin-button {
+  //  -webkit-appearance: none;
+  //  margin: 0;
+  //}
+}
+
+[type="password"] {
+
+}
+
+[type="phone"] {
+
+}
+
+[type="range"] {
+
+}
+
+[type="search"] {
+
+}
+
+[type="tel"] {
+
+}
+
+[type="text"] {
+
+}
+
+[type="time"] {
+
+}
+
+[type="url"] {
+
+}
+
+[type="checkbox"] {
+
+}
+
+[type="radio"] {
+
+}
+
+textarea {
+  @include typo(textarea, $typo-map-form);
+
+  background-color: $color-light;
+  border: thin solid $color-border--form;
+  height: 11.5em;
+  min-height: 6.5em;
+  outline: 2px solid transparent;
+  overflow: auto; // Remove default vertical scrollbars in IE
+  padding: 0.5em $spacing--tiny;
+  resize: vertical;
+  transition: outline $transition--base ease-in-out;
+  width: 100%;
+
+  &:focus {
+    outline: 2px solid $color-border--form;
+  }
+
+  &:disabled {
+    background: transparentize($color-border--form, 0.5);
+    outline: 0;
+  }
+}
+
+//
+// Select
+//
+
+select {
+  @include typo(select, $typo-map-form);
+
+  appearance: none;
+  background-color: $color-light;
+  border: thin solid $color-border--form;
+  height: 5rem;
+  padding: 0.25em 0.5em;
+
+  //Hide arrows in IE
+  &::-ms-expand {
+    display: none;
+  }
+
+  &[multiple],
+  &[size] {
+    height: auto;
+  }
+
+  &:disabled {
+    background: transparentize($color-border--form, 0.5);
+  }
+}
+
+//@-moz-document url-prefix() {
+//  /* If you use a background image */
+//  select {
+//    background-image: none;
+//    padding-right: 0;
+//    -moz-appearance: menulist;
+//    appearance: menulist;
+//  }
+//}
+
+//
+// Buttons
+//
+
+button,
+[type="submit"],
+[type="reset"] {
+  @include reset-button;
+  @include typo(button, $typo-map-form);
+
+  background: $color-medium;
+  border: thin solid transparent;
+  border-radius: 0;
+  color: $color-text--light;
+  padding: 0 1em;
+}
+
+button {
+
+  // remove dotted border in Fx
+  &::-moz-focus-inner {
+    border: 0;
+  }
+}
+
+[type="submit"] {
+  background: $color-black;
+  color: $color-text--light;
+
+  &:focus,
+  &:hover {
+
+  }
+
+  &:disabled {
+    background: $color-medium;
+  }
+}
+
+[type="reset"] {
+  border: thin solid $color-black;
+
+  &:focus,
+  &:hover {
+
+  }
+
+  &:disabled {
+    border-color: $color-medium;
+  }
+}

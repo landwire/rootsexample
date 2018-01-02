@@ -1,0 +1,20 @@
+//*****************************************
+// Utilities: Buttons
+//*****************************************
+
+@mixin reset-button($display: inline-block, $background: transparent, $font-size: 1em) {
+  background: $background;
+  border: 0;
+  cursor: pointer;
+  display: $display;
+  font-size: $font-size;
+}
+
+@mixin button-as-link($color: $color-link--base, $font-size: 1em, $display: inline) {
+  @include link($color);
+  @include reset-button($display: $display, $background: transparent, $font-size: $font-size);
+
+  @if $display != inline {
+    padding: 0;
+  }
+}

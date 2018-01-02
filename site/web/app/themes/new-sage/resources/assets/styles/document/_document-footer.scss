@@ -1,0 +1,20 @@
+//*****************************************
+// Document: Document footer
+//*****************************************
+
+.document-footer {
+  border-bottom: 50px solid $color-red--base;
+  border-top: 1px solid $color-border--base;
+
+  // align content to the right
+  .l-column {
+    overflow-x: hidden; // because of scroll bars from flex item
+    padding: 3rem 0;
+    width: 100%;
+
+    @include mq(tablet) {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

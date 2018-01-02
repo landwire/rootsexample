@@ -1,0 +1,78 @@
+//*****************************************
+// Webfonts: Roboto
+//*****************************************
+
+// Regular
+@font-face {
+  font-family: $font-roboto;
+  font-style: $font-style--base;
+  font-variant: normal;
+  font-weight: $font-weight--base;
+  src:
+    local('Roboto'),
+    local('Roboto Regular'),
+    local('Roboto-Regular'),
+    local('RobotoRegular'),
+    local('robotoregular'),
+    url('#{$path-fonts}Roboto/Roboto-Regular-webfont.woff') format('woff');
+}
+
+// Medium
+@font-face {
+  font-family: $font-roboto;
+  font-style: $font-style--base;
+  font-variant: normal;
+  font-weight: $font-weight--medium;
+  src:
+    local('Roboto'),
+    local('Roboto Medium'),
+    local('Roboto-Medium'),
+    local('RobotoMedium'),
+    local('robotomedium'),
+    url('#{$path-fonts}Roboto/Roboto-Medium-webfont.woff') format('woff');
+}
+
+// Bold
+@font-face {
+  font-family: $font-roboto;
+  font-style: $font-style--base;
+  font-variant: normal;
+  font-weight: $font-weight--bold;
+  src:
+    local('Roboto'),
+    local('Roboto Bold'),
+    local('Roboto-Bold'),
+    local('RobotoBold'),
+    local('robotobold'),
+    url('#{$path-fonts}Roboto/Roboto-Bold-webfont.woff') format('woff');
+}
+
+// Regular Italic
+@font-face {
+  font-family: $font-roboto;
+  font-style: $font-style--italic;
+  font-variant: normal;
+  font-weight: $font-weight--base;
+  src:
+    local('Roboto'),
+    local('Roboto Italic'),
+    local('Roboto-Italic'),
+    local('RobotoItalic'),
+    local('robotoitalic'),
+    url('#{$path-fonts}Roboto/Roboto-Italic-webfont.woff') format('woff');
+}
+
+// Bold Italic
+@font-face {
+  font-family: $font-roboto;
+  font-style: $font-style--italic;
+  font-variant: normal;
+  font-weight: $font-weight--bold;
+  src:
+    local('Roboto'),
+    local('Roboto BoldItalic'),
+    local('Roboto-Bold-Italic'),
+    local('RobotoBoldItalic'),
+    local('robotobolditalic'),
+    url('#{$path-fonts}Roboto/Roboto-BoldItalic-webfont.woff') format('woff');
+}

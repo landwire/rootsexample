@@ -1,0 +1,13 @@
+//*****************************************
+// Document: Document backlink
+//*****************************************
+
+.document-backlink {
+  margin-bottom: 2rem;
+
+  @include mq(wide) {
+    .content-container {
+      padding-left: 10rem;
+    }
+  }
+}

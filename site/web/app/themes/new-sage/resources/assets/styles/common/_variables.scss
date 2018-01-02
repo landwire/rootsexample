@@ -1,0 +1,691 @@
+// ------------------------------------------
+// Colors
+// ------------------------------------------
+
+//
+// Basics
+//
+
+/// @color White
+/// @group Defaults
+$color-white: #fff;
+/// @color Black
+/// @group Defaults
+$color-black: #000;
+/// @color Black Transparent
+/// @group Defaults
+$color-black--transparent: rgba(0, 0, 0, 0.2);
+/// @color Black Semi-Transparent
+/// @group Defaults
+$color-black--semi-transparent: rgba(0, 0, 0, 0.8);
+/// @color Black Mid-Transparent
+/// @group Defaults
+$color-black--mid-transparent: rgba(0, 0, 0, 0.5);
+
+
+/// @color Light
+/// @group Defaults
+$color-light: $color-white;
+/// @color Dark
+/// @group Defaults
+$color-dark: #000;
+/// @color Medium
+/// @group Defaults
+$color-medium: #888;
+
+/// @color Base
+/// @group Grey
+$color-grey--base: #e5e5e5;
+
+/// @color Light
+/// @group Grey
+$color-grey--light: #f2f2f2;
+
+
+//
+// ww corporate
+//
+
+/// @color Lila
+/// @group Corporate
+$color-lila--base: #660047;
+/// @color Lila
+/// @group Corporate
+$color-lila--light: lighten($color-lila--base, 20%);
+
+/// @color Petrol
+/// @group Corporate
+$color-petrol--base: #3b99bb;
+/// @color Petrol Light
+/// @group Corporate
+$color-petrol--light: lighten($color-petrol--base, 20%);
+
+/// @color Green
+/// @group Corporate
+$color-green--base: #94ac3c;
+/// @color Green Light
+/// @group Corporate
+$color-green--light: lighten($color-green--base, 20%);
+
+/// @color Blue
+/// @group Corporate
+$color-blue--base: #004a99;
+/// @color Blue Light
+/// @group Corporate
+$color-blue--light: lighten($color-blue--base, 20%);
+
+/// @color Malibu
+/// @group Corporate
+$color-malibu--base: #5cc5ed;
+/// @color Blue Light
+/// @group Corporate
+$color-malibu--light: lighten($color-malibu--base, 20%);
+
+/// @color Red
+/// @group Corporate
+$color-red--base: #d34836;
+/// @color Red Light
+/// @group Corporate
+$color-red--light: lighten($color-red--base, 20%);
+
+
+//
+// Decoration
+//
+
+/// @color Base
+/// @group Border
+$color-border--base: #b4b4b4;
+/// @color Base
+/// @group Border--light
+$color-border--light: #e0e0e0;
+/// @color Form
+/// @group Border
+$color-border--form: #ddd;
+
+
+//
+// Text
+//
+
+/// @color Base
+/// @group Text
+$color-text--base: #333;
+/// @color Medium
+/// @group Text
+$color-text--medium: $color-medium;
+/// @color Light
+/// @group Text
+$color-text--light: $color-white;
+
+//
+// Link
+//
+
+/// @color Base
+/// @group Link
+$color-link--base: $color-dark;
+/// @color Red
+/// @group Link
+$color-link--red: $color-red--base;
+/// @color Blue
+/// @group Link
+$color-link--blue: $color-blue--base;
+
+//
+// Functional
+//
+
+/// @color Error
+/// @group GUI
+$color-error--base: #e20049;
+/// @color Error Background
+/// @group GUI
+/// @value rgba(255, 0, 100, 0.3)
+$color-error--background: mix($color-error--base, $color-light, 15%);
+
+/// @color Success
+/// @group GUI
+$color-success--base: #53c000;
+/// @color Success Background
+/// @group GUI
+/// @value rgba(255, 0, 100, 0.3)
+$color-success--background: mix($color-success--base, $color-light, 10%);
+
+//
+// Sharing
+//
+
+/// @color Facebook
+/// @group Social
+$color-facebook: #3b5998;
+/// @color Google+
+/// @group Social
+$color-googleplus: #dd4b39;
+/// @color LinkeIn
+/// @group Social
+$color-linkedin: #006087;
+/// @color Twitter
+/// @group Social
+$color-twitter: #1da1f2;
+/// @color Xing
+/// @group Social
+$color-xing: #005a5f;
+/// @color Youtube
+/// @group Social
+$color-youtube: #cd201f;
+/// @color Flickr
+/// @group Social
+$color-flickr: #e2e2e2;
+/// @color Instagram
+/// @group Social
+$color-instagram: #da2f73;
+/// @color Whatsapp
+/// @group Social
+$color-whatsapp: #25d366;
+/// @color Skype
+/// @group Social
+$color-skype: #00aff0;
+/// @color Mail
+/// @group Social
+$color-mail: $color-green--base;
+
+
+//
+// Info module
+//
+
+/// @color Info
+/// @group Info
+$color-info--info: lightblue;
+/// @color Warning
+/// @group Info
+$color-info--warning: lightyellow;
+/// @color Error
+/// @group Info
+$color-info--error: salmon;
+
+
+// ------------------------------------------
+// Social Media
+// ------------------------------------------
+
+// list of used services on this website
+$social-links: twitter, youtube, mail, googleplus, facebook, skype;
+
+// the corresponding color-values for use in mixins
+$social-colors: (
+  facebook: $color-facebook,
+  twitter: $color-twitter,
+  youtube: $color-youtube,
+  instagram: $color-instagram,
+  whatsapp: $color-whatsapp,
+  xing: $color-xing,
+  linkedin: $color-linkedin,
+  googleplus: $color-googleplus,
+  skype: $color-skype,
+  mail: $color-green--base
+);
+
+//------------------------------------------------------
+//------------------------------------------------------
+//------------------------------------------------------
+//------------------------------------------------------
+//------------------------------------------------------
+//------------------------------------------------------
+//------------------------------------------------------
+//------------------------------------------------------
+
+
+// ------------------------------------------
+// Colors
+// ------------------------------------------
+
+//
+// Basics
+//
+
+/// @color White
+/// @group Defaults
+$color-white: #fff;
+/// @color Black
+/// @group Defaults
+$color-black: #000;
+/// @color Black Transparent
+/// @group Defaults
+$color-black--transparent: rgba(0, 0, 0, 0.3);
+/// @color Light
+/// @group Defaults
+$color-light: $color-white;
+/// @color Dark
+/// @group Defaults
+$color-dark: #000;
+/// @color Medium
+/// @group Defaults
+$color-medium: #888;
+/// @color Dark
+/// @group Grey
+$color-grey--dark: #4a4a4a;
+/// @color Light
+/// @group Grey
+$color-grey--light: #f0f0f0;
+/// @color Ultralight
+/// @group Grey
+$color-grey--ultralight: #f7f7f7;
+
+
+//
+// corporate
+//
+
+/// @color Turquoise
+/// @group Corporate
+$color-turquoise--base: #a5d9d9;
+/// @color Turquoise Light
+/// @group Corporate
+$color-lila--light: lighten($color-turquoise--base, 20%);
+
+/// @color Green
+/// @group Corporate
+$color-green--base: #64bebe;
+/// @color Green Light
+/// @group Corporate
+$color-green--light: lighten($color-green--base, 20%);
+
+/// @color Red
+/// @group Corporate
+$color-red--base: #f03255;
+/// @color Red Light
+/// @group Corporate
+$color-red--light: lighten($color-red--base, 20%);
+
+/// @color Salmon
+/// @group Corporate
+$color-salmon--base: #fdecf0;
+/// @color Red Light
+/// @group Corporate
+$color-salmon--light: lighten($color-salmon--base, 20%);
+
+//
+// Decoration
+//
+
+/// @color Base
+/// @group Border
+$color-border--base: #979797;
+/// @color Form
+/// @group Border
+$color-border--form: #ddd;
+/// @color Menu
+/// @group Border
+$color-border--menu: #dcdcdc;
+
+/// @color Base
+/// @group Border
+$color-shadow--base: $color-black--transparent;
+
+
+//
+// Text
+//
+
+/// @color Base
+/// @group Text
+$color-text--base: $color-grey--dark;
+/// @color Medium
+/// @group Text
+$color-text--medium: $color-medium;
+/// @color Light
+/// @group Text
+$color-text--light: $color-light;
+/// @color Turquoise
+/// @group Text
+$color-text--turquoise: $color-turquoise--base;
+
+
+//
+// Link
+//
+
+/// @color Base
+/// @group Link
+$color-link--base: $color-red--base;
+/// @color Highlight
+/// @group Link
+$color-link--highlight: $color-dark;
+
+//
+// Functional
+//
+
+/// @color Info
+/// @group GUI
+$color-info--base: #888;
+/// @color Info Background
+/// @group GUI
+/// @value rgba(255, 0, 100, 0.3)
+$color-info--background: mix($color-info--base, $color-light, 15%);
+
+/// @color Error
+/// @group GUI
+$color-error--base: #e20049;
+/// @color Error Background
+/// @group GUI
+/// @value rgba(255, 0, 100, 0.3)
+$color-error--background: mix($color-error--base, $color-light, 15%);
+
+/// @color Success
+/// @group GUI
+$color-success--base: #53c000;
+/// @color Success Background
+/// @group GUI
+/// @value rgba(255, 0, 100, 0.3)
+$color-success--background: mix($color-success--base, $color-light, 10%);
+
+/// @color Warning
+/// @group GUI
+$color-warning--base: #f8c61c;
+/// @color Warning Background
+/// @group GUI
+/// @value rgba(255, 0, 100, 0.3)
+$color-warning--background: mix($color-warning--base, $color-light, 10%);
+
+//
+// Sharing
+//
+
+/// @color Facebook
+/// @group Social
+$color-facebook: #3b5998;
+/// @color Google+
+/// @group Social
+$color-googleplus: #d95032;
+/// @color LinkeIn
+/// @group Social
+$color-linkedin: #006087;
+/// @color Twitter
+/// @group Social
+$color-twitter: #1da1f2;
+/// @color Xing
+/// @group Social
+$color-xing: #005a5f;
+/// @color Youtube
+/// @group Social
+$color-youtube: #cd201f;
+/// @color Flickr
+/// @group Social
+$color-flickr: #e2e2e2;
+/// @color Instagram
+/// @group Social
+$color-instagram: #da2f73;
+/// @color Whatsapp
+/// @group Social
+$color-whatsapp: #25d366;
+
+/// @color Mail
+/// @group Social
+$color-mail: $color-red--base;
+
+//
+// Info module
+//
+
+/// @color Info
+/// @group Info
+$color-info--info: $color-info--base;
+/// @color Warning
+/// @group Info
+$color-info--warning: $color-warning--base;
+/// @color Error
+/// @group Info
+$color-info--error: $color-error--base;
+
+
+// ------------------------------------------
+// Typography
+// ------------------------------------------
+
+//
+// Font stacks and families
+//
+
+/// @font Roboto
+/// @fontWeight 400
+/// @fontWeight 500
+/// @fontWeight 600
+$font-roboto: Roboto;
+
+/// @font Roboto Condensed
+/// @fontWeight 300
+/// @fontWeight 400
+/// @fontWeight 600
+$font-roboto-condensed: RobotoCondensed;
+
+// Font stacks
+$font-stack-roboto: #{$font-roboto}, Arial, sans-serif;
+$font-stack-roboto-condensed: #{$font-roboto-condensed}, Arial, sans-serif;
+
+// @fontFamily Base (Helvetica)
+$font-stack--base: $font-stack-roboto;
+// @fontFamily Headline (Helvetica)
+$font-stack--headline: $font-stack-roboto-condensed;
+
+/// @font Monaco
+/// @fontWeight 300
+/// @fontWeight 400
+/// @fontWeight 700
+$font-monaco: Monaco;
+
+// Font stacks
+$font-stack-monaco: #{$font-monaco}, Consolas, monospace;
+
+// @fontFamily Monospace (Monaco)
+$font-stack--monospace: $font-stack-monaco;
+
+
+//
+// Font size
+//
+
+/// @fontSize Nano
+$font-size--nano: 1.2rem;
+/// @fontSize Tiny
+$font-size--tiny: 1.4rem;
+/// @fontSize Small
+$font-size--small: 1.6rem;
+/// @fontSize Base (default)
+$font-size--base: 1.8rem;
+/// @fontSize Medium
+$font-size--medium: 2rem;
+/// @fontSize Large
+$font-size--large: 2.2rem;
+/// @fontSize Extra Large
+$font-size--extralarge: 2.4rem;
+/// @fontSize Huge
+$font-size--huge: 3rem;
+
+//
+// Line heights
+//
+/// @lineHeight Nano
+$line-height--nano: 1;
+/// @lineHeight Tiny
+$line-height--tiny: 1.166;
+/// @lineHeight Small
+$line-height--small: 1.25;
+/// @lineHeight Medium
+$line-height--medium: 1.45;
+/// @lineHeight Base
+$line-height--base: 1.45;
+/// @lineHeight Large
+$line-height--large: 1.8;
+
+/// @lineHeight Headline
+$line-height--headline: $line-height--small;
+
+//
+// Font styles
+//
+
+$font-style--base: normal;
+$font-style--italic: italic;
+
+//
+// Font weights
+//
+
+$font-weight--light: 300;
+$font-weight--base: 400;
+$font-weight--medium: 500;
+$font-weight--semibold: 600;
+$font-weight--bold: 700;
+$font-weight--black: 900;
+
+// ------------------------------------------
+// Transitions
+// ------------------------------------------
+
+// Keep in sync with speed in js/core/config.js
+/// @timing Instant
+$transition--instant: 0.05s;
+/// @timing Fast
+$transition--fast: 0.1s;
+/// @timing Base
+$transition--base: 0.3s;
+/// @timing Slow
+$transition--slow: 0.7s;
+/// @timing Sluggish
+$transition--sluggish: 1.2s;
+
+// ------------------------------------------
+// Layout
+// ------------------------------------------
+
+//
+// Grid
+//
+
+$grid-columns: 12;
+$grid-container--max-width: 1200px; // min value = mq desktop + gutter width
+$grid-container--max-width-large: 1400px;
+$grid-container--max-width-small: 780px; // max content width (634px) + gutter widthh
+$grid-gutter--width: 30px;
+$grid-gutter--half-width: ($grid-gutter--width / 2);
+$content-max-width: 750px; // 676px
+$menu-max-width: 1000px;
+// component gutter should not be larger than grid gutter width
+// .teaser-list could cause horizontal scrollbars
+$component-gutter--width: 15px;
+$component-gutter--half-width: ($component-gutter--width / 2);
+
+//
+// Spacing
+//
+
+/// @spacing Nano
+/// @group Base
+$spacing--nano: 0.2rem;
+/// @spacing Tiny
+/// @group Base
+$spacing--tiny: 0.5rem;
+/// @spacing Small
+/// @group Base
+$spacing--small: 1.2rem;
+/// @spacing Base
+/// @group Base
+$spacing--base: 2rem;
+/// @spacing Large
+/// @group Base
+$spacing--large: 3rem;
+/// @spacing Huge
+/// @group Base
+$spacing--huge: 6rem;
+
+// Document sections
+/// @spacing Small
+/// @group Document Layout
+/// @value 2.4rem
+$spacing-section--small: $spacing--base;
+/// @spacing Base
+/// @group Document Layout
+/// @value 3.6rem
+$spacing-section--base: $spacing--large;
+/// @spacing Large
+/// @group Document Layout
+/// @value 4.8rem
+$spacing-section--large: $spacing--huge;
+
+//
+// Layer
+//
+
+$layer--nirvana: -1;
+$layer--audience: 0;
+$layer--supernumerary: 21;
+$layer--actor: 42;
+$layer--celebrity: 900;
+$layer--popstar: 1000;
+$layer--diva: 1020;
+
+// ------------------------------------------
+// Media queries
+// ------------------------------------------
+
+$mq-landscape: '(orientation: landscape)';
+$mq-portrait: '(orientation: portrait)';
+
+// Retina
+$mq-retina: '(min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 144dpi)';
+
+// Fallback classname for legacy browsers
+$classname-no-query-fallback: '.lt-ie9';
+
+//
+// sass-mq
+// @doc https://github.com/guardian/sass-mq
+//
+// Keep in sync with breakpoints in js/core/core.js
+/* stylelint-disable */
+$mq-breakpoints: (
+  // device families
+  base: 0px,
+  mobile: 320px,
+  phablet: 540px,
+  tablet: 740px,
+  desktop: 980px,
+  wide: 1200px,
+  // Tweakpoints
+  quote: 1040px,
+  slider: 1280px,
+  extraordinary: 1400px,
+  // Main navigation switch
+  main-navigation: 780px
+);
+/* stylelint-enable */
+
+// Render responsive styles. Set to false for .lt-ie9
+$mq-responsive: true;
+
+// The breakpoint that fits if $mq-responsive is set to false
+$mq-static-breakpoint: desktop;
+
+// Display the current mq in the upper right corner
+//$mq-show-breakpoints: (base, mobile, phablet, tablet, desktop, wide, slider, feature, extraordinary);
+
+// ------------------------------------------
+// Assets
+// ------------------------------------------
+
+$path-fonts: "../fonts/";
+$path-images: "../img/";
+
+// ------------------------------------------
+// Features
+// ------------------------------------------
+
+$config-off-canvas-navigation: false !default;
+$config-teaser-list--tiny: true !default;
+$config-teaser-list--small: true !default;
+$config-teaser-list--medium: true !default;
+$config-teaser-list--wide-medium: false !default;
+$config-teaser-list--slick: true !default;

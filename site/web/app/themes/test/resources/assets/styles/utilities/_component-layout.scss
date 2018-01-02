@@ -1,0 +1,24 @@
+//*****************************************
+// Utilities: Component layout
+//*****************************************
+
+@mixin c-container {
+  clear: both;
+  margin: 0 (-$component-gutter--width / 2);
+}
+
+@mixin c-column--base($min-height: 1px, $indent: $component-gutter--width / 2) {
+  min-height: $min-height;
+  padding-left: $indent;
+  padding-right: $indent;
+  position: relative;
+}
+
+@mixin c-column {
+  @include clearfix;
+  @include c-column--base;
+
+  @include mq(desktop) {
+    float: left;
+  }
+}

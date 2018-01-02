@@ -1,0 +1,24 @@
+//*****************************************
+// Components: Header logo
+//*****************************************
+
+// <a>
+.header-logo {
+  //margin-bottom: $spacing--base;
+
+  @include mq(tablet) {
+    margin-right: $spacing--base;
+  }
+
+  svg {
+    max-height: 81px;
+  }
+
+  .search-is-visible & {
+    display: none;
+  }
+
+  span {
+    @include visuallyhidden();
+  }
+}

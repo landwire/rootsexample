@@ -1,0 +1,72 @@
+//*****************************************
+// Utilities: Triangle mixins
+// @see http://blackbe.lt/useful-sass-mixins-css-trangle/
+//*****************************************
+
+@mixin triangle--base($direction, $color, $width, $height, $z-index: 50) {
+  $halfHeight: $height / 2;
+  $halfWidth: $width / 2;
+
+  content: "";
+  display: inline-block;
+  height: 0;
+  position: absolute;
+  width: 0;
+  z-index: $z-index;
+
+  // Right
+  @if $direction == right {
+    border-bottom: $halfHeight solid transparent;
+    border-left: $width solid $color;
+    border-top: $halfHeight solid transparent;
+    right: -$width;
+    top: 50%;
+    transform: translateY(-($halfHeight));
+  }
+
+  // Left
+  @if $direction == left {
+    border-bottom: $halfHeight solid transparent;
+    border-right: $width solid $color;
+    border-top: $halfHeight solid transparent;
+    left: -$width;
+    top: 50%;
+    transform: translateY(-($halfHeight));
+  }
+
+  // Up
+  @if $direction == up {
+    border-bottom: $height solid $color;
+    border-left: $halfWidth solid transparent;
+    border-right: $halfWidth solid transparent;
+    left: 50%;
+    top: -$height;
+    transform: translateX(-($halfWidth));
+  }
+
+  // Down
+  @if $direction == down {
+    border-left: $halfWidth solid transparent;
+    border-right: $halfWidth solid transparent;
+    border-top: $height solid $color;
+    bottom: -$height;
+    left: 50%;
+    transform: translateX(-($halfWidth));
+  }
+}
+
+@mixin triangle($direction: down, $color: $color-light, $width: 2rem, $height: 1rem) {
+  position: relative;
+
+  &::after {
+    @include triangle--base($direction, $color, $width, $height);
+
+    @content;
+  }
+}
+
+@mixin reset-triangle() {
+  &::after {
+    display: none;
+  }
+}

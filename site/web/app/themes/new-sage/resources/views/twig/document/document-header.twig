@@ -1,0 +1,47 @@
+<header class="document-header">
+
+    <div class="l-container">
+
+        <div class="l-column l-column--huge">
+
+            <div class="document-header__main">
+
+                {% include 'components/header-logo.twig' %}
+
+                <div class="header-meta-nav">
+                    {% set menu = header_meta_menu %}
+                    {% include "menu.twig" with {'menu': menu.get_items} %}
+                </div>
+
+                <div class="interaction-container">
+
+                     header-search
+
+                     search-toggle
+
+                     main-navigation-toggle
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="navigation-container">
+
+        <div class="l-container">
+            <div class="l-column l-column--huge">
+
+                <nav id="nav-main" class="nav-main" role="navigation">
+                    {% set menu = main_menu %}
+                    {% include "menu.twig" with {'menu': menu.get_items} %}
+                </nav><!-- #nav -->
+
+            </div>
+        </div>
+
+    </div>
+
+</header>

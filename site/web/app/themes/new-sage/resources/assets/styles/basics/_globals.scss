@@ -1,0 +1,399 @@
+$typography-map: (
+  default: (
+    base: (ff: $font-stack--base, fs: $font-size--base, lh: $line-height--base)
+  ),
+  h1: (
+    base: (ff: $font-stack--headline, fs: $font-size--huge, fw: $font-weight--bold, lh: $line-height--small),
+    tablet: (fs: $font-size--huge)
+  ),
+  h2: (
+    base: (ff: $font-stack--headline, fs: $font-size--huge, fw: $font-weight--light, lh: $line-height--small),
+    tablet: (fs: $font-size--huge)
+  ),
+  h3: (
+    base: (ff: $font-stack--headline, fs: $font-size--extralarge, fw: $font-weight--bold, lh: $line-height--small),
+    tablet: (fs: $font-size--extralarge)
+  ),
+  h4: (
+    base: (ff: $font-stack--headline, fs: $font-size--large, fw: $font-weight--bold, lh: $line-height--small),
+    tablet: (fs: $font-size--large)
+  ),
+  h5: (
+    base: (ff: $font-stack--headline, fs: $font-size--medium, fw: $font-weight--base, lh: $line-height--small, tt: uppercase),
+    tablet: (fs: $font-size--medium)
+  ),
+  h6: (
+    base: (ff: $font-stack--headline, fs: $font-size--base, fw: $font-weight--bold, lh: $line-height--small),
+    tablet: (fs: $font-size--base)
+  ),
+  code: (
+    base: (ff: $font-stack--monospace)
+  ),
+  blockquote: (
+    base: (fs: 2.5rem, fw: 700, lh: 1.33),
+    tablet: (fs: 3.6rem)
+  ),
+  superheadline: (
+    base: (ff: $font-stack--base, fs: 2.5rem, fw: 400, lh: 1, tt: uppercase)
+  ),
+  more: (
+    base: ()
+  )
+);
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+//
+// Document
+//
+
+:root,
+html {
+  // force vertical scrollbar
+  border-bottom: thin solid transparent; // should be equal to the footer background
+  box-sizing: border-box;
+  // set base for rem values
+  font-size: 62.5%; // 10px
+  line-height: 1.5; // 15px
+  min-height: 100%;
+  text-size-adjust: none;
+}
+
+body {
+  @include typo(default, $typography-map);
+
+  background-color: $color-light;
+  color: $color-text--base;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+//
+// Block element basics
+//
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 1em;
+}
+
+h1 {
+  @include typo(h1, $typography-map);
+}
+
+h2 {
+  @include typo(h2, $typography-map);
+}
+
+h3 {
+  @include typo(h3, $typography-map);
+}
+
+h4 {
+  @include typo(h4, $typography-map);
+}
+
+h5 {
+  @include typo(h5, $typography-map);
+}
+
+h6 {
+  @include typo(h6, $typography-map);
+}
+
+// reset bottom margin for all except headlines for last childs
+p,
+blockquote,
+address,
+dl,
+ul,
+ol,
+table,
+fieldset,
+figure,
+pre {
+  margin: 0 0 1.3334em;
+
+  // reset bottom margin for all except headlines for last childs
+  //&:last-child {
+  //  margin-bottom: 0;
+  //}
+}
+
+abbr {
+  cursor: help;
+}
+
+blockquote,
+q {
+  // low-9, high-9, », «
+  quotes: "\201E" "\201D" "»" "«";
+
+  &:lang(en) {
+    quotes: "«" "»" "’" "’";
+  }
+}
+
+blockquote {
+  // see blockquote component
+}
+
+cite {
+  color: $color-green--base;
+}
+
+p {
+  &:empty {
+    display: none;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+em {
+
+}
+
+strong {
+
+}
+
+//
+// Links
+//
+
+a {
+  color: $color-red--base;
+  text-decoration: none;
+
+  &:visited,
+  &[visited] {
+    color: $color-red--light;
+    text-decoration: underline;
+  }
+
+  &:hover,
+  &[hover],
+  &:focus,
+  &[focus] {
+    color: $color-red--base;
+    text-decoration: underline;
+  }
+
+  &:hover,
+  &[hover] {
+  }
+
+  &:focus,
+  &[focus] {
+  }
+
+  &:active,
+  &[active] {
+    text-decoration: underline;
+  }
+
+  img {
+    border: 0;
+  }
+}
+
+// Buttons
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="search"] {
+  -webkit-appearance: none;
+}
+
+//
+// Media
+//
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+svg {
+  height: auto;
+  max-width: 100%;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+figure {
+
+}
+
+figcaption {
+
+}
+
+//
+// Lists
+//
+
+ol,
+ul {
+
+}
+
+li {
+
+}
+
+dl {
+
+}
+
+dt,
+dd {
+  display: block;
+  margin-top: $spacing--tiny;
+}
+
+dt {
+  font-weight: bold;
+  padding: 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+dd {
+  margin: 0;
+}
+
+//
+// Ruler
+//
+hr {
+  background-color: $color-border--base;
+  border: 0;
+  clear: both;
+  display: block;
+  font-size: 1px;
+  height: 1px;
+  line-height: 1;
+  margin: 2em 0;
+}
+
+//
+// Tables
+//
+table {
+  border: 0;
+  border-collapse: collapse;
+  //table-layout: fixed;
+  vertical-align: top;
+  width: 100%;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+tr {
+  border-top: thin solid $color-border--base;
+
+  &:first-child {
+    border-top-color: $color-dark;
+  }
+
+  thead & {
+    border-top: 0;
+  }
+}
+
+th,
+td {
+  border: 0;
+  padding: 0.75em 0.5em;
+  text-align: left;
+  vertical-align: top;
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+
+  tr:last-child & {
+    padding-bottom: 1em;
+  }
+}
+
+th {
+  font-weight: 700;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+td {
+  tr:first-child & {
+    padding-top: 1em;
+  }
+}
+
+//
+// Embed
+//
+embed {
+  height: auto;
+  max-width: 100%;
+}
+
+//
+// Code
+//
+code {
+  @include typo(code, $typography-map);
+
+  background-color: lighten($color-medium, 50%);
+  border: thin solid $color-border--base;
+  overflow: scroll;
+}
+
+pre {
+  background-color: lighten($color-medium, 50%);
+  display: block;
+
+  code {
+    border: 0;
+  }
+}
+
+//
+// Address
+//
+address {
+  font-style: normal;
+}
+
+//
+// Inline content
+//
+dfn,
+samp {
+  @include typo(code);
+}

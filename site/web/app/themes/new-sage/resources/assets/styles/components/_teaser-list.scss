@@ -1,0 +1,62 @@
+//*****************************************
+// Components: Teaser list
+//*****************************************
+
+.teaser-list {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 (-$grid-gutter--width / 2); // same as in teaser.scss -> l-column--base($indent: $grid-gutter--width / 2);
+  margin-bottom: (-$grid-gutter--width);
+  width: calc(100% + #{$grid-gutter--width}); // needed to add this as Drupal was causing problems
+
+  // otherwise we have $grid-gutter--width too much space at bottom of teaser-list
+  // could also be solved through a class on container or list itself
+  &:last-child {
+    // use of important to always make sure last child gets negative margin to remove whitespace
+    //margin-bottom: (-$grid-gutter--width) !important;
+  }
+
+  @if $config-teaser-list--slick {
+    &.slick-initialized {
+      // use of important to override important above :-)
+      margin-bottom: 0 !important;
+    }
+  }
+
+  &.teaser-list--box-teaser {
+    margin-bottom: (-$grid-gutter--half-width);
+  }
+}
+
+.teaser-list--equal-height-calculation-mode {
+  .teaser-list__item,
+  .teaser-list__item > * {
+    transition: min-height 0s 0s linear !important;
+  }
+}
+
+//
+// Fields
+//
+
+.teaser-list__item {
+  @include l-teaser($margin-bottom: $spacing--large);
+
+  width: 100%;
+
+  @include mq(tablet) {
+    margin-bottom: $spacing--base;
+  }
+
+  &:only-child {
+    margin-bottom: 0;
+  }
+
+  .teaser-list--box-teaser & {
+    margin-bottom: $grid-gutter--half-width;
+  }
+
+  > * {
+    width: 100%;
+  }
+}

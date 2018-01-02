@@ -1,0 +1,123 @@
+//*****************************************
+// Components: Stage Item
+//*****************************************
+
+$typo-map-stage-item: (
+  superheadline: (
+    base: (
+      ff: $font-stack--headline,
+      fs: $font-size--huge,
+      fw: $font-weight--base,
+      lh: $line-height--small,
+      tt: uppercase
+    ),
+    tablet: (
+      fs: $font-size--huge,
+    ),
+  ),
+  headline: (
+    base: (
+      ff: $font-stack--headline,
+      fs: $font-size--huge,
+      fw: $font-weight--bold,
+      lh: $line-height--small,
+      tt: uppercase
+    ),
+    tablet: (
+      fs: $font-size--huge,
+    ),
+  )
+);
+
+
+.stage-item {
+  color: $color-light;
+  position: relative;
+  //z-index: -1;
+}
+
+.stage-item__media {
+  height: 300px;
+  margin-bottom: 0;
+  overflow: hidden;
+  position: relative;
+
+  @include mq(phablet) {
+    height: 300px;
+  }
+
+  @include mq(tablet) {
+    height: 390px;
+  }
+
+  @include mq(desktop) {
+    height: 390px; // big enough to fill all width
+  }
+
+  &::before {
+    //background: rgba(0, 0, 0, 0.1);
+    //bottom: 0;
+    //content: '';
+    //left: 0;
+    //position: absolute;
+    //right: 0;
+    //top: 0;
+    //z-index: 1;
+  }
+
+  &::after {
+    background: linear-gradient(135deg, $color-green--base 50%, $color-red--base 100%);
+    bottom: 0;
+    content: '';
+    left: 0;
+    opacity: 0.3;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  img {
+    height: 100%;
+    left: 50%;
+    max-width: none;
+    position: relative;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+
+    @include mq(extraordinary) {
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+
+.stage-item__main {
+  background: $color-white;
+  bottom: 20%;
+  color: $color-red--base;
+  left: 0;
+  padding: 1.5rem 2.5rem 1.5rem 5rem;
+  position: absolute;
+  z-index: 1;
+
+  @include mq(tablet) {
+    padding: 1.5rem 2.5rem 1.5rem 15rem;
+  }
+
+  @include mq(desktop) {
+    padding: 1.5rem 2.5rem 1.5rem 15rem;
+  }
+}
+
+.stage-item__superheadline {
+  @include typo(superheadline, $typo-map-stage-item);
+
+  margin-bottom: $spacing--tiny;
+}
+
+.stage-item__headline {
+  @include typo(headline, $typo-map-stage-item);
+
+  margin: 0;
+}

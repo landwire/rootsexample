@@ -1,0 +1,42 @@
+//*****************************************
+// Document: Document header
+//*****************************************
+
+.document-header {
+  position: relative;
+
+  .l-column {
+    width: 100%;
+  }
+}
+
+.document-header__main {
+  align-items: center;
+  align-items: flex-start;
+  display: flex;
+  justify-content: flex-start;
+  min-height: 159px; // must change if new logo is placed
+  padding: $spacing--base 0;
+  position: relative;
+
+  @include mq(tablet) {
+    align-items: center;
+    flex-direction: row;
+  }
+
+
+  .header-logo {
+    @include mq(desktop) {
+      //margin-bottom: -2px;
+    }
+  }
+
+  .interaction-container {
+    align-items: center;
+    display: flex;
+    margin-left: auto;
+    position: relative;
+  }
+}
+
+

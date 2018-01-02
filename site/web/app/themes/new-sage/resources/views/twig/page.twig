@@ -1,0 +1,67 @@
+{% extends "layout/base.twig" %}
+
+{% block content %}
+
+
+	{% if post.get_thumbnail %}
+
+		<header class="document-content__stage">
+			<div class="l-container">
+				<div class="l-column l-column--huge">
+
+				{% include 'components/stage-item.twig' with
+					{
+						post: post
+					}
+				%}
+
+				</div>
+			</div>
+		</header>
+	{% else %}
+		<header class="document-content__header">
+
+			<div class="l-container">
+				<div class="l-column l-column--large">
+
+					{% if post.superheadline %}
+						<p class="superheadline">{{post.superheadline}}</p>
+					{% endif %}
+
+					<h1 class="document-title">{{post.title}}</h1>
+
+				</div>
+			</div>
+
+		</header>
+
+	{% endif %}
+
+
+	<div class="document-content__main">
+
+		<div class="l-container">
+			<div class="l-column l-column--full">
+
+				<div class="document-content__content">
+
+                    {{post.content}}
+
+				</div>
+
+			</div>
+		</div>
+	</div><!-- /content-wrapper -->
+
+	<div class="document-content__sharing">
+
+		<div class="l-container">
+			<div class="l-column l-column--full">
+
+                {{ function('do_shortcode', '[Sassy_Social_Share]') }}
+
+			</div>
+		</div>
+	</div><!-- /content-wrapper -->
+
+{% endblock %}

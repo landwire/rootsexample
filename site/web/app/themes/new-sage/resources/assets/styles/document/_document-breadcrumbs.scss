@@ -1,0 +1,25 @@
+//*****************************************
+// Document: Document breadcrumbs
+//*****************************************
+
+.document-breadcrumbs {
+  background: $color-grey--base;
+  border-top: 6px solid $color-grey--light;
+  display: none;
+  margin-bottom: $spacing--large;
+  //margin-top: $spacing--base;
+  overflow-y: hidden; // arrows slightly poke out at the bottom
+
+  @include mq(phablet) {
+    display: block;
+  }
+
+  .has-backlink & {
+    margin-bottom: 2rem;
+  }
+
+  .has-stage &,
+  .page-profile & {
+    margin-bottom: 0;
+  }
+}

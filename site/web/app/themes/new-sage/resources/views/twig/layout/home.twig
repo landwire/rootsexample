@@ -1,0 +1,27 @@
+{% block html_head_container %}
+
+{% include 'html-header.twig' %}
+	{% block head %}
+	{% endblock %}
+	</head>
+{% endblock %}
+
+	<body class="{{body_class}}" data-template="base.twig">
+
+    {% include 'document/document-header.twig' %}
+
+	<main id="main" class="document-main" role="main">
+
+		<div class="document-content">
+
+			{% block content %}
+				No content found. Please try again.
+			{% endblock %}
+
+		</div>
+	</main>
+
+    {% include 'document/document-footer.twig' %}
+
+	</body>
+</html>

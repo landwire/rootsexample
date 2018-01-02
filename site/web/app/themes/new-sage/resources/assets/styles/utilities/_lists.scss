@@ -1,0 +1,22 @@
+@mixin reset-list($display: block, $margin: 0) {
+  display: $display;
+  list-style: none;
+  margin-bottom: $margin;
+  padding-left: 0;
+}
+
+@mixin inline-list($display: inline-block, $margin: 0, $child: li, $child-display: inline-block, $has-reset: false) {
+  @if $has-reset == false {
+    @include reset-list($display, $margin);
+  }
+
+  #{$child} {
+    display: $child-display;
+
+    @content;
+  }
+}
+
+@mixin flex-list() {
+  @include inline-list($display: flex, $child-display: block);
+}

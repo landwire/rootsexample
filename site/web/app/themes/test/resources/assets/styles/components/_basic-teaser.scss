@@ -1,0 +1,249 @@
+//*****************************************
+// Components: Basic teaser
+//*****************************************
+
+$typo-map-basic-teaser: (
+  teaser-title: (
+    base: (
+      ff: $font-stack--headline,
+      fs: $font-size--medium,
+      fw: $font-weight--bold,
+      lh: $line-height--medium
+    ),
+    tablet: (
+      fs: $font-size--large,
+    ),
+  ),
+  teaser-base: (
+    base: (
+      ff: $font-stack--base,
+      fs: $font-size--small,
+      fw: $font-weight--base,
+      lh: $line-height--base,
+    ),
+    tablet: (
+      fs: $font-size--small,
+    ),
+  ),
+  teaser-superheadline: (
+    base: (
+      ff: $font-stack--headline,
+      fs: $font-size--tiny,
+      fw: $font-weight--base,
+      lh: $line-height--nano,
+      tt: uppercase
+    ),
+    tablet: (
+      fs: $font-size--tiny,
+    ),
+  ),
+  teaser-overlay: (
+    base: (
+      ff: $font-stack--headline,
+      fs: $font-size--tiny,
+      fw: $font-weight--base,
+      lh: $line-height--nano,
+      tt: uppercase
+    ),
+    tablet: (
+      fs: $font-size--small,
+    ),
+  )
+);
+
+.basic-teaser {
+  background: $color-white;
+  display: flex; // to achieve equal height teasers
+  flex-direction: column; // to achieve equal height teasers
+  max-width: 160px;
+  padding-bottom: 0;
+
+  @include mq(tablet) {
+    box-shadow: $color-black--transparent 0 1px 4px 0;
+    //padding-bottom: 2rem;
+  }
+
+  @include mq(wide) {
+    //padding-bottom: 3rem;
+  }
+
+  .teaser-list & {
+    height: 100%;
+    position: relative;
+  }
+}
+
+.basic-teaser--no-image {
+  .basic-teaser__media {
+    position: relative;
+  }
+
+  .basic-teaser__overlay {
+    @include typo(teaser-overlay, $typo-map-basic-teaser);
+
+    align-items: center;
+    bottom: 0;
+    color: $color-white;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    > span {
+      //@include typo(date-day);
+    }
+  }
+
+  .basic-teaser__image {
+    background: $color-petrol--base;
+    padding-bottom: 56.25%;
+
+    &::after {
+      background: $color-white;
+      content: ' ';
+      display: block;
+      height: 100%;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      transition: opacity $transition--fast 0s ease-in-out;
+      width: 100%;
+    }
+  }
+}
+
+.basic-teaser__media {
+  margin-bottom: 0;
+
+  &:hover {
+    .basic-teaser__image {
+      &::after {
+        opacity: 0.2;
+      }
+    }
+
+    img {
+      opacity: 0.8;
+    }
+  }
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+.basic-teaser__content {
+  flex: 1 1 auto;
+  padding: 1.5rem 0;
+  padding: 1.5rem $grid-gutter--half-width;
+
+
+  @include mq(tablet) {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem $grid-gutter--half-width;
+  }
+
+  //.teaser-list--no-padding & {
+  //  padding-left: $grid-gutter--half-width;
+  //  padding-right: $grid-gutter--half-width;
+  //
+  //  @include mq(tablet) {
+  //    padding-left: $grid-gutter--half-width;
+  //    padding-right: $grid-gutter--half-width;
+  //  }
+  //}
+  //
+  //.teaser-list--small {
+  //}
+  //
+  //.theme-grey &,
+  //.theme-green &,
+  //.theme-petrol & {
+  //  padding-bottom: 3rem;
+  //
+  //  @include mq(wide) {
+  //    padding-bottom: 2rem;
+  //  }
+  //}
+}
+
+.basic-teaser__header {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  .basic-teaser__superheadline {
+    @include typo(teaser-superheadline, $typo-map-basic-teaser);
+
+    background: $color-red--base;
+    border-radius: 3px;
+    color: $color-white;
+    margin-bottom: 1.5rem;
+    padding: 0.8rem 1.2rem;
+
+    @include mq(tablet) {
+      left: 0;
+      max-width: 100%; // nur einzeilig und damit es noch border radius hat
+      position: absolute;
+      top: 0;
+      white-space: nowrap; // nur einzeilig!
+    }
+  }
+
+  .basic-teaser__title {
+    //@include typo(teaser-title);
+    @include typo(teaser-title, $typo-map-basic-teaser);
+
+    margin-bottom: 1.5rem;
+
+    @include mq(tablet) {
+      padding-top: 4.5rem;
+    }
+
+    a {
+      @include link($text-decoration: none);
+    }
+  }
+}
+
+.basic-teaser__footer {
+  @include mq(tablet) {
+    margin-left: auto;
+    margin-top: auto;
+  }
+}
+
+.basic-teaser__main {
+  //@include typo(teaser-base);
+  @include typo(teaser-base, $typo-map-basic-teaser);
+
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.basic-teaser__link {
+  &::before {
+    content: ">";
+    display: inline-block;
+  }
+
+  span {
+    @include visuallyhidden();
+  }
+}
+
+// exceptions
+.basic-teaser--no-superheadline {
+  .basic-teaser__title {
+    padding-top: 0;
+  }
+}

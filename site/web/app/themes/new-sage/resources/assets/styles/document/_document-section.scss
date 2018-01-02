@@ -1,0 +1,132 @@
+//*****************************************
+// Document: Document section
+//*****************************************
+
+// <section>
+.document-section--stage {
+  margin-bottom: 2rem;
+
+  @include mq(desktop) {
+    margin-bottom: 7rem;
+  }
+}
+
+.document-section {
+  //@include l-document-section;
+  margin: 6rem 0;
+  width: 100%;
+
+  &.theme-green {
+    background: $color-green--base;
+    margin: 0;
+    padding: 6rem 0;
+
+    &--top-only {
+      padding-bottom: 0;
+    }
+  }
+
+  &.theme-petrol {
+    background: $color-petrol--base;
+    margin: 0;
+    padding: 6rem 0;
+
+    &--top-only {
+      padding-bottom: 0;
+    }
+  }
+
+  &.theme-white {
+    background: $color-white;
+    margin: 0;
+    padding: 6rem 0;
+
+    &--top-only {
+      padding-bottom: 0;
+    }
+  }
+
+  &.theme-grey {
+    background: $color-grey--light;
+    margin: 0;
+    padding: 6rem 0;
+
+    &--top-only {
+      padding-bottom: 0;
+    }
+  }
+
+  .document-content__extended &,
+  .document-complementary & {
+    &:first-child {
+      margin: 0;
+      padding-top: 6rem;
+    }
+
+    &:last-child {
+      padding-bottom: 6rem;
+    }
+  }
+
+  .document-content__sections & {
+    &:first-child {
+      @include mq(wide) {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.document-section__header {
+
+}
+
+.document-section__main {
+
+}
+
+.document-section__content {
+
+}
+
+.document-section__complementary {
+
+}
+
+.document-section__title {
+
+}
+
+/*
+*** Exceptions and special rules for sections
+ */
+
+.document-section--sponsors {
+  //overflow-x: hidden;
+  margin-bottom: 6rem;
+  margin-top: 7.5rem;
+
+  @include mq(tablet) {
+    margin-bottom: 5rem;
+    margin-top: 7.5rem;
+  }
+}
+
+.document-section--metanav {
+  margin: 0;
+}
+
+.document-section--author {
+  display: none;
+
+  @include mq(desktop) {
+    display: block;
+  }
+}
+
+// add greater margin-bottom to team section as the layout is different now to the initial design
+.document-section--team {
+  .teaser-list__item {
+    margin-bottom: 8rem;
+  }
+}

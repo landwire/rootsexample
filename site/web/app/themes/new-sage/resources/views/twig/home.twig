@@ -1,0 +1,23 @@
+{% extends "layout/home.twig" %}
+
+{% block content %}
+	<div class="document-content__main">
+
+		<div class="l-container">
+			<div class="l-column l-column--full">
+
+				<h2>{{ foo }}</h2>
+				<p>{{ qux }}</p>
+					{% include ['components/teaser-list.twig'] with {
+						size: "small",
+						items: posts,
+						}
+					%}
+
+				{% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+
+			</div>
+		</div>
+
+	</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+<footer class="document-footer">
+
+    <div class="l-container">
+        <div class="l-column l-column--huge">
+
+            <div class="footer-meta-nav">
+                {% set menu = footer_meta_menu %}
+                {% include "menu.twig" with {'menu': menu.get_items} %}
+            </div>
+
+        </div>
+    </div>
+
+</footer>
+
+{{ function('wp_footer') }}
